@@ -111,7 +111,6 @@ aside {
 	flex-flow: column wrap;
 	flex-direction:column;
 	align-content:stretch;
-	
 }
 
 #tipsList {
@@ -119,7 +118,13 @@ aside {
 	flex-basis: 100%;
 	flex:1;
 	flex-direction:column;
-	align-content:stretch;
+	align-content:stretch;  
+}
+
+.tipList-card {
+	background-color: lightcyan;
+	margin: .5em;
+	max-width: 200px;
 }
 
 .asideClass {
@@ -128,6 +133,8 @@ aside {
    padding: 10px;
    margin: 10px;
    float: right;
+   background-color: lawngreen;
+
 }
 
 h4 {

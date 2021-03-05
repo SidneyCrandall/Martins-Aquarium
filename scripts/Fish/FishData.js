@@ -24,14 +24,15 @@ const fishCollection = [
 		inches: 3,
 		image: "guppy.jpeg"
 	},
-	{   saltWater: true,
-        harvestLocation: "Atlantic Ocean",
-        diet: "Squid",
+	{
+		saltWater: true,
+		harvestLocation: "Atlantic Ocean",
+		diet: "Squid",
 		name: "BigBoss",
-        species: "Amber Jack",
-        inches: 60,
-        image: "amberjack.jpeg"
-    },
+		species: "Amber Jack",
+		inches: 60,
+		image: "amberjack.jpeg"
+	},
 	{
 		saltWater: true,
 		harvestLocation: "Pacific Ocean",
@@ -104,21 +105,25 @@ const fishCollection = [
 		inches: 39,
 		image: "bluecatfish.jpeg"
 	},
-	{   saltWater: true,
-        harvestLocation: "South Pacific",
-        diet: "Shrimp",
-        inches: 64,
-        species: "Tuna",
-        name: "Bruno",
-        image: "tuna.jpeg" },
+	{
+		saltWater: true,
+		harvestLocation: "South Pacific",
+		diet: "Shrimp",
+		inches: 64,
+		species: "Tuna",
+		name: "Bruno",
+		image: "tuna.jpeg"
+	},
 
-		{   saltWater: false,
-        harvestLocation: "Petsmart",
-        diet: "Algae",
-        name: "Dorothy",
-        species: "Goldfish",
-        inches: 3,
-        image: "goldfish.jpeg" },
+	{
+		saltWater: false,
+		harvestLocation: "Petsmart",
+		diet: "Algae",
+		name: "Dorothy",
+		species: "Goldfish",
+		inches: 3,
+		image: "goldfish.jpeg"
+	},
 	{
 		saltWater: false,
 		harvestLocation: "Lake Tahoe",
@@ -209,14 +214,15 @@ const fishCollection = [
 		inches: 999,
 		image: "Cthulhu.jpeg"
 	},
-	{   saltWater: false,
-        harvestLocation: "Amazon River",
-        diet: "Smaller Fish",
-        name: "Bitey",
-        species: "Pirhana",
-        inches: 7.5, 
-        image: "Pirhana.jpeg"
-    },
+	{
+		saltWater: false,
+		harvestLocation: "Amazon River",
+		diet: "Smaller Fish",
+		name: "Bitey",
+		species: "Pirhana",
+		inches: 7.5,
+		image: "Pirhana.jpeg"
+	},
 	{
 		saltWater: true,
 		harvestLocation: "St.Croix",
@@ -236,13 +242,15 @@ const fishCollection = [
 		image: "Pirhana.jpeg"
 	},
 
-	{   saltWater: true,
-        harvestLocation: "Atlantic, Pacific, and southern sea",
-        diet: "Smaller fish", 
-        name: "Bluefin tuna", 
-        species: "Thunnus thynnus",
-        inches: 84,
-        image: "bluefintuna.jpeg" },
+	{
+		saltWater: true,
+		harvestLocation: "Atlantic, Pacific, and southern sea",
+		diet: "Smaller fish",
+		name: "Bluefin tuna",
+		species: "Thunnus thynnus",
+		inches: 84,
+		image: "bluefintuna.jpeg"
+	},
 	{
 		saltWater: true,
 		harvestLocation: "Baltic Sea",
@@ -254,41 +262,41 @@ const fishCollection = [
 	},
 ];
 
- export const getFish = () => {
-        return fishCollection;
- };
+export const getFish = () => {
+	return fishCollection;
+};
 
 
- export const getMostHolyFish = () => {
-    // 3, 6, 9, 12, etc... fish
-    const holyFishArray = []
-    for (const fishObj of fishCollection) {
-		if ( fishObj.inches % 3 ===0 ) {
-				holyFishArray.push(fishObj)
+export const getMostHolyFish = () => {
+	// 3, 6, 9, 12, etc... fish
+	const holyFishArray = []
+	for (const fishObj of fishCollection) {
+		if (fishObj.inches % 3 === 0) {
+			holyFishArray.push(fishObj)
 		}
 
-    }
-
-    return holyFishArray
- };
-
- export const getSoldierFish = () => {
-	 // 5, 10, 15, 20, 25, etc... fish
-	 const soldiersArray =[]
-	 for ( const fishObj of fishCollection){
-		 if (fishObj.inches % 5 ===0 && fishObj.inches %3 !==0){
-				soldiersArray.push(fishObj)
-			}
-	 };
-	 return soldiersArray
 	}
- export const getUnworthyFish = () => {
-	 // Any fish not a multiple of 3 or 5
-	 const unworthyArray = []
-	 for ( const fishObj of fishCollection) {
-		 if (fishObj.inches % 3 !== 0 && fishObj.inches %5 !== 0){
-			 unworthyArray.push(fishObj)
-	 		}
+
+	return holyFishArray
+};
+
+export const getSoldierFish = () => {
+	// 5, 10, 15, 20, 25, etc... fish
+	const soldiersArray = []
+	for (const fishObj of fishCollection) {
+		if (fishObj.inches % 5 === 0 && fishObj.inches % 3 !== 0) {
+			soldiersArray.push(fishObj)
 		}
-	 return unworthyArray
- };
+	};
+	return soldiersArray
+}
+export const getUnworthyFish = () => {
+	// Any fish not a multiple of 3 or 5
+	const unworthyArray = []
+	for (const fishObj of fishCollection) {
+		if (fishObj.inches % 3 !== 0 && fishObj.inches % 5 !== 0) {
+			unworthyArray.push(fishObj)
+		}
+	}
+	return unworthyArray
+};

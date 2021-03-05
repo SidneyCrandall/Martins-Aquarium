@@ -1,5 +1,11 @@
 import {FishList} from "./Fish/FishList.js"
-import { placesHL } from "./HL/HL-LIST.js";
 
 FishList ();
+
+import { placesHL } from "./HL/HL-LIST.js";
+
 placesHL();
+
+import { atipList } from "./tips/tipsList.js";
+
+atipList();
