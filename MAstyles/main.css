@@ -164,6 +164,11 @@ footer {
 	text-align: center;
 }
 
+h3 {
+	text-align: center;
+	text-decoration: underline;
+}
+
 /* .aside {
 	left: 40px;
 	color: rgb(255, 251, 251);
